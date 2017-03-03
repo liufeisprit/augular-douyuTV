@@ -6,6 +6,6 @@ angular.module('roomModule',['ngRoute'])
 		css:'component/room/room.css'
 	});
 }])
-.controller('roomListCtrl',['$scope',function($scope){
+.controller('roomCtrl',['$scope',function($scope){
 	
 }])
