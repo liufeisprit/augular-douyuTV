@@ -6,6 +6,15 @@ angular.module('roomModule',['ngRoute'])
 		css:'component/room/room.css'
 	});
 }])
-.controller('roomCtrl',['$scope',function($scope){
-	
+.service("roomInfo",["$http",'$rootScope',function($http,$rootScope){
+	this.get=function(){
+		return $http.get("https://m.douyu.com/html5/live?roomId="+$rootScope.roomid);
+		
+	}
+}])
+.controller('roomCtrl',['$scope','$rootScope','roomInfo',function($scope,$rootScope,roomInfo){
+	roomInfo.get().success(function(res){
+		$scope.roomDetails=res.data;
+		console.log($scope.roomDetails.nickname)
+	})
 }])

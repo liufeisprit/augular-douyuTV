@@ -1,2 +1,34 @@
-roomlisg
-<a href="#/room">fangjian</a>
+<!--<a href="#/room">fangjian</a>-->
+<div class="mainbody">
+	<div class="m-row">
+		<div class="title">
+			<span>
+				<img src="https://shark.douyucdn.cn/app/douyu-mobile/m-douyu/res/icon_play.png?v=2.1" alt="" />
+				{{categoryName}}
+				<font>{{gameName}}</font>
+			</span>
+		</div>
+		<div class="live-list">
+			<a href="#/room" class="live" ng-repeat="(i,categoryObj) in categoryAll" ng-if="i<cont" ng-click="Byval(categoryObj.cate_id,categoryObj.room_id)">
+				<img lazy-src="{{categoryObj.room_src}}" alt="" class="live-feature" />
+				<div class="live-title">{{categoryObj.room_name}}</div>
+				<div class="live-info">
+					<span class="dy-name">{{categoryObj.nickname}}</span>
+					<span class="popularity">{{categoryObj.online}}</span>
+				</div>
+			</a>
+		</div>
+		<div class="more" ng-click="upload()">
+			加载更多
+		</div>
+		
+	</div>
+	<footer class="category-footer">
+		<p>
+		    客服热线：027-65026248<br>
+		    武汉斗鱼网络科技有限公司<br>
+		    湖北省武汉市东湖开发区光谷软件园F4栋8楼<br>
+		    版权所有 © www.douyu.com&nbsp;鄂ICP备15011961号-1<br>
+		</p>
+	</footer>
+</div>

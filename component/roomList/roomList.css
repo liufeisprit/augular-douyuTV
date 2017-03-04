@@ -1,0 +1,127 @@
+html body {
+    line-height: 1.5;
+    /* font-family: "Helvetica Neue",Helvetica,STHeiTi,sans-serif; */
+    color: #333;
+    background-color: #999;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.m-row {
+    position: relative;
+    box-sizing: border-box;
+    /*margin-top: .26666667rem;*/
+    padding: 0 .13333333rem .13333333rem;
+    width: 100%;
+    background-color: #fff;
+}
+.m-row .title {
+    width: 100%;
+    height: 1.13333333rem;
+    color: #424242;
+    line-height: 1.13333333rem;
+}
+.m-row .title span {
+    display: inline-block;
+    margin-left: .13333333rem;
+}
+.m-row .title span img {
+    width: .3999999rem;
+    height: .3999999rem;
+    float: left;
+    margin-right: .16rem;
+    vertical-align: top;
+    margin-top: .3666667rem;
+}
+.m-row .title font {
+    background-color: #F4F4F4;
+    margin-left: .39525rem;
+    padding: .05333332rem .2666666rem;
+    border-radius: .39525rem;
+    color: #FA7122;
+    height: .453333333rem;
+}
+.m-row .live-list .live {
+    float: left;
+    position: relative;
+    display: block;
+    margin: .13333333rem;
+    width: 4.6rem;
+    height: 3.28rem;
+    color: #333;
+}
+.m-row .live-list .live .live-feature {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2.61333333rem;
+    border-radius: .2rem;
+}
+.m-row .live-list .live .live-title {
+    position: absolute;
+    bottom: 0;
+    left: .2rem;
+    width: 4rem;
+    color: #000;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    line-height: .66666667rem;
+}
+.m-row .live-list .live .live-info .dy-name {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 2.746666666rem;
+    display: inline-block;
+    padding-left: .2rem;
+}
+.m-row .live-list .live .live-info .popularity {
+    float: right;
+    padding-right: .2rem;
+}
+.m-row .live-list .live .live-info {
+    position: absolute;
+    bottom: .66666667rem;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    padding: .1rem 0;
+    border-bottom-left-radius: .2rem;
+    border-bottom-right-radius: .2rem;
+    background: linear-gradient(top,rgba(0,0,0,0) 0,rgba(0,0,0,.1) 30%,rgba(0,0,0,.8) 100%);
+    background: -webkit-linear-gradient(top,rgba(0,0,0,0) 0,rgba(0,0,0,.1) 30%,rgba(0,0,0,.8) 100%);
+    background: -moz-linear-gradient(top,rgba(0,0,0,0) 0,rgba(0,0,0,.1) 30%,rgba(0,0,0,.8) 100%);
+}
+.m-row .live-list .live .live-info .popularity:before {
+    display: inline-block;
+    content: '';
+    margin-top: .10666667rem;
+    width: .4rem;
+    height: .26666667rem;
+    background-image: url(../../img/classIcon.png);
+    background-size: 5.76rem 1.13333333rem;
+    background-position: -1.733333333rem -.8rem;
+    vertical-align: top;
+}
+.m-row .live-list:after {
+    display: block;
+    content: '';
+    clear: both;
+}
+.m-row .more {
+    height: 1.08695652rem;
+    line-height: 1.08695652rem;
+    text-align: center;
+    border: 1px solid #DDD;
+    font-size: .373333333rem;
+    color: #7A7A7A;
+    border-radius: .1333333rem;
+}
+.category-footer {
+    background-color: #eee;
+    color: #949494;
+    text-align: center;
+    padding: .3rem 0 1.466666666rem;
+}

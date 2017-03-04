@@ -37,6 +37,7 @@ angular.module('homeModule',['ngRoute'])
 .controller('homeCtrl',['$scope',"catearr","$rootScope","homeDataArr","swiper",function($scope,catearr,$rootScope,homeDataArr,swiper){
 	var hot=0;
 	catearr.get().success(function(res){
+//		console.log(res);
 		$scope.catearr=res.cate1Info;
 		$scope.catedetailarr=res.cate2Info;
 		$scope.changeall=function(){
@@ -44,7 +45,7 @@ angular.module('homeModule',['ngRoute'])
 	}
 	})
 	homeDataArr.get().success(function(res){
-		console.log(res);
+//		console.log(res);
 		$scope.slideArr=res.banner;
 		$scope.hotListArr=res.hotList[hot].data;
 		//切换最热直播
@@ -104,5 +105,6 @@ angular.module('homeModule',['ngRoute'])
 	document.body.scrollTop =0;
 	event.preventDefault();
 })
+	
 }])
 

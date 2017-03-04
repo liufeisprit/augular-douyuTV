@@ -1,1 +1,53 @@
-222
+<!--直播-->
+<div class="video-area">
+	<div class="player">
+		<video  id="dy-video-player" class="video-js" type="application/x-mpegURL" webkit-playsinline preload="auto" autoplay="autoplay" src="http://hls3a.douyucdn.cn/live/843697rvDXIHec2k_550/playlist.m3u8?wsSecret=0730d943bba80cd294ceb3e3f06e7242&wsTime=1488620788">
+			<p>您的浏览器不支持video标签</p>
+		</video>
+		<div class="poster">
+			<img src="{{roomDetails.room_src}}" alt="" id="video-poster"/>
+			<div class="play-btn"></div>
+			<div class="room-info">
+				<span class="name"></span>
+				<span class="class"></span>
+			</div>
+			<div class="room-stop-focus" ng-if="roomDetails.show_status=0">
+				<p class="stop-title">主播正在赶来路上~</p>
+				<p class="stop-tip">赶快关注主播不错过下次~</p>
+				<button class="stop-more hd-focus">关注</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--主播信息-->
+<div id="infoArea" class="info-area">
+	<div class="info-room">
+		<img src="{{roomDetails.avatar}}" alt="" class="dy-photo"/>
+		<div class="dy-info">
+			<p class="dy-name-content">
+				主播:
+				<span id="nickname" class="dy-name">{{roomDetails.nickname}}</span>
+			</p>
+			<p class="online-content" id="online">
+				共
+				<span class="online"></span>
+				人正在观看
+			</p>
+		</div>
+	</div>
+	<div class="info-handle">
+		<div class="hd-item hd-send" id="sendBar">
+			<img class="icon" src="https://shark.douyucdn.cn/app/douyu-mobile/m-douyu/res/hd-send.png?v=2.1" alt="" />发弹幕
+			<b class="split-line"></b>
+		</div>
+		<div class="hd-item hd-focus" class="focusRoom">
+			<img class="icon" src="https://shark.douyucdn.cn/app/douyu-mobile/m-douyu/res/hd-focus.png?v=2.1" alt="" />关注
+			<b class="split-line"></b>
+		</div>
+		<div class="hd-item hd-share" id="shareRoom">
+			<img class="icon" src="https://shark.douyucdn.cn/app/douyu-mobile/m-douyu/res/hd-share.png?v=2.1" alt="" />分享
+			<b class="split-line"></b>
+		</div>
+	</div>
+</div>
