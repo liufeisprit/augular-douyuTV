@@ -5,22 +5,31 @@
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title></title>
     <link rel="stylesheet" type="text/css" href="lib/swiper-3.4.1.min.css"/>
-    <script src="lib/angular.min.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/swiper-3.4.1.min.css"/>
+    
+   
+</head>
+<body >
+	<header class="header">
+			<a href="#/home"><div class="logo"></div></a>
+			<div class="btns">
+				<a href="/ search/ index" class="search">搜索</a>
+				<span class="split"></span>
+				<span class="classes">分类</span>
+			</div>
+	</header>
+	<div ng-view></div>
+	<script src="lib/angular.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="lib/angular-css.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="lib/angular-route.js" type="text/javascript" charset="utf-8"></script>
      <script src="app.js" type="text/javascript" charset="utf-8"></script>
     <script src="lib/me-lazyload.js" type="text/javascript" charset="utf-8"></script>
-    <script src="lib/swiper-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="lib/jquery.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="component/home/home.js" type="text/javascript" charset="utf-8"></script>
+     <script src="lib/swiper-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="component/roomList/roomList.js" type="text/javascript" charset="utf-8"></script>
     <script src="component/room/room.js" type="text/javascript" charset="utf-8"></script>
-   
-</head>
-<body >
-	<a href="#/home">主页</a>
-	<a href="#/roomList">分类</a>
-	<div ng-view></div>
-	11111
 </body>
 </html>

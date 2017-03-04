@@ -1,1 +1,105 @@
-<h1>home</h1>
+<div class="layout-nav">
+	<div class="nav-header">
+		<span class="cur item" ng-click="changeall()">全部</span>
+		<span class="item" ng-repeat="obj in catearr" ng-click="changecatetab(obj.shortName)" data-type="{{obj.shortName}}">{{obj.cate1Name}}</span>
+	</div>
+	<div class="nav-content">
+		<a href="#/roomList" ng-repeat="all in catedetailarr" ng-click="getroomList(all.shortName)">
+			<div class="nav-item">
+				<img ng-src="{{all.icon}}"/><br />{{all.cate2Name}}
+			</div>
+		</a>
+	</div>
+</div>
+<div class="swiper-container" id="slider">
+				<div class="swiper-wrapper" id="swiper-wrapper">
+					<div class="swiper-slide" ng-repeat="obj in slideArr" style="width: 375px;" ng-click="getroomList2(obj.id)">
+						
+						<img ng-src="{{obj.pic_url}}" alt="" />
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+	</div>
+<div class="layout-rooms hot">
+	<div class="title">
+		<span class="text">最热</span>
+		<span class="change" ng-click="changehot()">换一换</span>
+	</div>
+	<div class="content">
+		<a href="">
+		<div class="c-room-item" ng-repeat="hotitem in hotListArr">
+			<div class="room-show">
+				<img ng-src="{{hotitem['room_src']}}"/>
+				<div class="up-shadow"></div>
+				<span class="room-online">{{hotitem.online}}</span>
+				<div class="bottom-shadow"></div>
+				<span class="room-nickname">{{hotitem.nickname}}</span>
+			</div>
+			<div class="room-desc">{{hotitem.room_name}}</div>
+		</div></a>
+	</div>
+</div>
+<div class="layout-rooms live">
+	<div class="title">
+		<span class="text">正在直播</span>
+		<span class="live-online" >当前<span>{{livecount}}</span>个直播</span>
+	</div>
+	<div class="content">
+		<a href="">
+		<div class="c-room-item" ng-repeat="hotitem in liveListArr">
+			<div class="room-show">
+				<img ng-src="{{hotitem['room_src']}}"/>
+				<div class="up-shadow"></div>
+				<span class="room-online">{{hotitem.online}}</span>
+				<div class="bottom-shadow"></div>
+				<span class="room-nickname">{{hotitem.nickname}}</span>
+			</div>
+			<div class="room-desc">{{hotitem.room_name}}</div>
+		</div></a>
+	</div>
+</div>
+<div class="layout-rooms yz">
+	<div class="title">
+		<span class="text">颜值</span>
+		<span class="more">更多</span>
+	</div>
+	<div class="content">
+		<a href="">
+		<div class="c-room-item" ng-repeat="hotitem in yzListArr">
+			<div class="room-show">
+				<img ng-src="{{hotitem['room_src']}}"/>
+				<div class="up-shadow"></div>
+				<span class="room-online">{{hotitem.online}}</span>
+				<div class="bottom-shadow"></div>
+				<span class="room-nickname">{{hotitem.nickname}}</span>
+			</div>
+			<div class="room-desc">{{hotitem.room_name}}</div>
+		</div></a>
+	</div>
+</div>
+<div class="layout-rooms mix" ng-repeat="mix in mixListArr">
+	<div class="title">
+		<span class="text">
+			<img ng-src="{{mix.icon}}" class="icon-mix"/>
+			<span>{{mix.tabName}}</span>
+			<d></d>
+		</span>
+		<span class="center-content" ng-repeat="center in mix.cate2Info">
+			{{center.cate2Name}}
+		</span>
+		<span class="more">更多</span>
+	</div>
+	<div class="content">
+		<a href="">
+		<div class="c-room-item" ng-repeat="hotitem in mix.data">
+			<div class="room-show">
+				<img ng-src="{{hotitem['room_src']}}"/>
+				<div class="up-shadow"></div>
+				<span class="room-online">{{hotitem.online}}</span>
+				<div class="bottom-shadow"></div>
+				<span class="room-nickname">{{hotitem.nickname}}</span>
+			</div>
+			<div class="room-desc">{{hotitem.room_name}}</div>
+		</div></a>
+	</div>
+</div>
