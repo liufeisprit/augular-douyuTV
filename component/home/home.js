@@ -62,7 +62,9 @@ angular.module('homeModule',['ngRoute'])
 	})
 	swiper.swiper();
 	//分类列表切换
-	$scope.changecatetab=function(obj){
+	$scope.changecatetab=function(obj,type){
+		$rootScope.catetype=type;
+		console.log($rootScope.catetype)
 			$.getJSON("https://m.douyu.com/category?type="+obj,function(res){
 				$scope.catedetailarr=res.cate2Info;
 			})

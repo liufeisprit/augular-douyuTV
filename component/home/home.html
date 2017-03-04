@@ -1,16 +1,17 @@
 <div class="layout-nav">
 	<div class="nav-header">
 		<span class="cur item" ng-click="changeall()">全部</span>
-		<span class="item" ng-repeat="obj in catearr" ng-click="changecatetab(obj.shortName)" data-type="{{obj.shortName}}">{{obj.cate1Name}}</span>
+		<span class="item" ng-repeat="obj in catearr" ng-click="changecatetab(obj.shortName,obj.cate1Name)" data-type="{{obj.shortName}}">{{obj.cate1Name}}</span>
 	</div>
 	<div class="nav-content">
-		<a href="#/roomList" ng-repeat="all in catedetailarr" ng-click="getroomList(all.shortName)">
+		<a href="#/roomList" ng-repeat="all in catedetailarr" ng-click="getroomList2(all.shortName)">
 			<div class="nav-item">
 				<img lazy-src="{{all.icon}}"/><br />{{all.cate2Name}}
 			</div>
 		</a>
 	</div>
 </div>
+<div class="layout-banner">
 <div class="swiper-container" id="slider">
 				<div class="swiper-wrapper" id="swiper-wrapper">
 					<div class="swiper-slide" ng-repeat="obj in slideArr" style="width: 375px;" ng-click="getroomList2(obj.id)">
@@ -21,7 +22,7 @@
 					</div>
 				</div>
 				<div class="swiper-pagination"></div>
-	</div>
+	</div></div>
 <div class="layout-rooms hot">
 	<div class="title">
 		<span class="text">最热</span>
