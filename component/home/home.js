@@ -47,6 +47,7 @@ angular.module('homeModule',['ngRoute'])
 		console.log(res);
 		$scope.slideArr=res.banner;
 		$scope.hotListArr=res.hotList[hot].data;
+		//切换最热直播
 		$scope.changehot=function(){
 			hot++;
 			if(hot>3){
@@ -60,6 +61,7 @@ angular.module('homeModule',['ngRoute'])
 		$scope.yzListArr=res.yzList;
 	})
 	swiper.swiper();
+	//分类列表切换
 	$scope.changecatetab=function(obj){
 			$.getJSON("https://m.douyu.com/category?type="+obj,function(res){
 				$scope.catedetailarr=res.cate2Info;
@@ -68,15 +70,37 @@ angular.module('homeModule',['ngRoute'])
 				$(".nav-header span").removeClass("cur");$(this).addClass("cur")
 	})
 		}
-	
+	//传值
 	$scope.getroomList=function(name){
 		$rootScope.roomName=name;
 	}
 	$scope.getroomList2=function(name){
 		$rootScope.roomSlideId=name;
 	}
-	$(".classes").bind("touchstart",function(){
-		$(".layout-nav").slideToggle();
-	})
-	
+	$scope.changehotlive=function(cateid,roomid){
+		$rootScope.cateid=cateid;
+		$rootScope.roomid=roomid;
+	}
+	$scope.changelive=function(cateid,roomid){
+		$rootScope.cateid=cateid;
+		$rootScope.roomid=roomid;
+	}
+	$scope.changeyz=function(cateid,roomid){
+		$rootScope.cateid=cateid;
+		$rootScope.roomid=roomid;
+	}
+	$scope.changemix=function(cateid,roomid){
+		$rootScope.cateid=cateid;
+		$rootScope.roomid=roomid;
+	}
+	$scope.changeslider=function(cateid,roomid){
+		$rootScope.cateid=cateid;
+		$rootScope.roomid=roomid;
+	}
+	//回到顶部
+	$(".gotop span").bind("touchstart",function(){
+	document.body.scrollTop =0;
+	event.preventDefault();
+})
 }])
+

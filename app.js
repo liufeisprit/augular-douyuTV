@@ -1,4 +1,4 @@
-var app=angular.module('douyuTV',['ngRoute','angularCSS','homeModule','roomListModule','roomModule'])
+var app=angular.module('douyuTV',['ngRoute','angularCSS','homeModule','roomListModule','roomModule',"me-lazyload"])
 .config(['$routeProvider',function($routeProvider){
 	$routeProvider.otherwise({redirectTo:'/home'});
 }]);

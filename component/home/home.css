@@ -117,6 +117,8 @@
     margin-bottom: .13333rem;
 }
 .c-room-item .room-show {
+	background: url(../../img/list-item-def-thumb.gif) no-repeat;
+    background-size: 100% 100%;
     position: relative;
     width: 4.8rem;
     height: 2.72rem;
@@ -293,4 +295,66 @@
     border: 1px solid #f70;
     color: #f70;
     border-radius: .56rem;
+}
+.layout-rooms .title .center-content {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    font-size: .29333rem;
+    color: #f70;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet{
+	background-color: #FFFFFF;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active {
+	width: 16px;
+	background: #FA7122;
+	border-radius:8px ;
+	}
+	.footer{background: #EEEEEE;}
+	.footer .gotop {
+    text-align: center;
+    font-size: .34667rem;
+    color: #666;
+    padding: .53333rem 0;
+}
+.footer .gotop span d {
+    margin-right: .13333rem;
+    margin-top: -.02667rem;
+}
+.icon-gotop{
+	display: inline-block;
+    vertical-align: middle;
+    background-image: url(../../img/icon-v2.png?);
+    background-size: 6.53333rem .53333rem;
+    height: .42667rem;
+    width: .4rem;
+    background-position: -5.06667rem 0
+}
+.footer .download {
+    margin: 0 auto;
+    text-align: center;
+    width: 8.50667rem;
+    line-height: 1.2rem;
+    height: 1.2rem;
+    background-color: #f70;
+    color: #fff;
+    font-size: .37333rem;
+    border-radius: .10667rem;
+    margin-bottom: .53333rem;
+}
+.footer p {
+    text-align: center;
+    color: #999;
+    font-size: .29333rem;
+    padding-bottom: 1.86667rem;
+    line-height: .45333rem;
 }

@@ -20,7 +20,7 @@
 				<span class="classes">分类</span>
 			</div>
 	</header>
-	<div ng-view></div>
+	<div ng-view class="homecontainer"></div>
 	<script src="lib/angular.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="lib/angular-css.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="lib/angular-route.js" type="text/javascript" charset="utf-8"></script>
@@ -31,5 +31,12 @@
      <script src="lib/swiper-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="component/roomList/roomList.js" type="text/javascript" charset="utf-8"></script>
     <script src="component/room/room.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+    	$(".classes").bind("touchstart",function(e){
+//		console.log(1);
+		e.preventDefault();
+		$(".layout-nav").slideToggle();
+	})
+    </script>
 </body>
 </html>
