@@ -34,7 +34,7 @@ angular.module('homeModule',['ngRoute'])
 		},50);
 	}
 }])
-.controller('homeCtrl',['$scope',"catearr","$rootScope","homeDataArr","swiper",function($scope,catearr,$rootScope,homeDataArr,swiper){
+.controller('homeCtrl',['$scope',"catearr","$rootScope","homeDataArr","swiper","$http",function($scope,catearr,$rootScope,homeDataArr,swiper,$http){
 	$(".btns").css("display","flex");
 	var hot=0;
 	catearr.get().success(function(res){
@@ -45,7 +45,7 @@ angular.module('homeModule',['ngRoute'])
 	}
 	})
 	homeDataArr.get().success(function(res){
-		console.log(res)
+//		console.log(res)
 		$scope.slideArr=res.banner;
 		$scope.hotListArr=res.hotList[hot].data;
 		//切换最热直播
@@ -65,10 +65,9 @@ angular.module('homeModule',['ngRoute'])
 	//分类列表切换
 	$scope.changecatetab=function(obj,type){
 		$rootScope.catetype=type;
-		console.log($rootScope.catetype)
-			$.getJSON("https://m.douyu.com/category?type="+obj,function(res){
-				$scope.catedetailarr=res.cate2Info;
-			})
+		$http.get("https://m.douyu.com/category?type="+obj).success(function(res){
+			$scope.catedetailarr=res.cate2Info;
+		})
 			$(".nav-header span").bind("touchstart",function(){
 				$(".nav-header span").removeClass("cur");$(this).addClass("cur")
 	})
