@@ -1,0 +1,19 @@
+{
+	"index.html": {
+		"resources": [
+			"css/index.css",
+			"component/room/room.js",
+			"lib/angular-css.min.js",
+			"lib/angular.min.js",
+			"component/home/home.js",
+			"lib/angular-route.js",
+			"lib/swiper-3.4.1.min.js",
+			"lib/swiper-3.4.1.min.css",
+			"component/roomList/roomList.js",
+			"app.js",
+			"lib/me-lazyload.js",
+			"css/reset.css",
+			"lib/jquery.min.js"
+		]
+	}
+}

@@ -139,4 +139,6 @@ angular.module('roomListModule',['ngRoute','me-lazyload'])
 		$rootScope.roomid=roomid;
 	}
 	
+	$(".btns").hide();
+	
 }])
