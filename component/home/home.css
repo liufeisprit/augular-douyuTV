@@ -365,3 +365,111 @@
     padding-bottom: 1.86667rem;
     line-height: .45333rem;
 }
+.home-yz-list-item {
+    float: left;
+    width: 4.8rem;
+    margin-left: .13333rem;
+    box-sizing: border-box;
+    padding-bottom: .26667rem;
+    overflow-x: hidden;
+  
+}
+.home-yz-list-item .show {
+	  background: url(../../img/list-item-def-thumb.gif) no-repeat;
+    	background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+    border-radius: .10667rem;
+    overflow: hidden;
+    position: relative;
+}
+.home-yz-list-item .show img {
+    width: 4.8rem;
+    height: 4.8rem;
+    top: 0;
+    left: 0;
+    display: block;
+    position: absolute;
+    position: relative;
+    border-radius: .10667rem;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+.home-yz-list-item .show .online {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: rgba(0,0,0,.65);
+    color: #fff;
+    font-size: .26667rem;
+    padding: .13333rem .21333rem;
+    border-radius: .10667rem;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.icon {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.icon-eye {
+    width: .26667rem;
+    height: .24rem;
+    background-image: url(../../img/roomonline.png);
+}
+.home-yz-list-item .show .online i {
+    margin-right: .13333rem;
+    vertical-align: middle;
+}
+.home-yz-list-item .info {
+    margin-top: .13333rem;
+    font-size: .32rem;
+}
+.home-yz-list-item .info .text-info {
+    width: 2.66667rem;
+    float: left;
+    margin-left: 0;
+}
+.home-yz-list-item .info .text-info .nickname {
+    margin-top: 0;
+    color: #333;
+}
+.home-yz-list-item .info .text-info p {
+    max-width: 100%;
+    overflow: hidden;
+    word-break: break-all;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.home-yz-list-item .info .text-info .nickname i {
+    margin-right: .10667rem;
+}
+.icon-user {
+    width: .26667rem;
+    height: .26667rem;
+    background-image: url(../../img/roomnickname.png);
+}
+.home-yz-list-item .info .location-info {
+    float: right;
+    max-width: 2rem;
+    overflow: hidden;
+    word-break: break-all;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: .32rem;
+    color: #999;
+}
+.home-yz-list-item .info .location-info:before {
+    content: " ";
+    float: left;
+    margin-right: .13333rem;
+    vertical-align: middle;
+    width: .24rem;
+    height: .29333rem;
+    background-image: url(../../img/location.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}

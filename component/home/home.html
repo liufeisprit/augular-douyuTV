@@ -70,16 +70,19 @@
 	</div>
 	<div class="content">
 		
-		<div class="c-room-item" ng-repeat="hotitem in yzListArr">
+		<div class="home-yz-list-item" ng-repeat="hotitem in yzListArr">
 			<a href="#/room" ng-click="changeyz(hotitem.cate2_id,hotitem.room_id)">
-			<div class="room-show">
-				<img lazy-src="{{hotitem['room_src']}}"/>
-				<div class="up-shadow"></div>
-				<span class="room-online">{{hotitem.online}}</span>
-				<div class="bottom-shadow"></div>
-				<span class="room-nickname">{{hotitem.nickname}}</span>
+			<div class="show">
+				<img lazy-src="{{hotitem['vertical_src']}}"/>
+				<span class="online"><i class="icon icon-eye"></i>{{hotitem.online}}</span>				
 			</div>
-			<div class="room-desc">{{hotitem.room_name}}</div></a>
+			<div class="info">
+				<div class="text-info">
+					<p class="nickname"><i class="icon icon-user"></i>{{hotitem.nickname}}</p>
+				</div>
+				<div class="location-info"><span>{{hotitem.anchorCity}}</span></div>
+			</div>
+				</a>
 		</div>
 	</div>
 </div>
