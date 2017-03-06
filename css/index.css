@@ -108,3 +108,52 @@ body{
     content: "";
     display: table;
 }
+.fix-download {
+    position: fixed;
+    z-index: 5;
+    bottom: 0;
+    height: 1.6rem;
+    width: 100%;
+}
+.fix-download .f-bg {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    background-color: rgba(0,0,0,.9);
+}
+.fix-download .img {
+    position: absolute;
+    top: 0;
+    width: 10rem;
+    height: 1.6rem;
+    background-image: url(../img/foot-download.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.fix-download button.close, .fix-download button.godown {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background: none;
+    border: none;
+    outline: none;
+}
+.fix-download button.godown {
+    width: 2.26666666rem;
+    right: .8rem;
+}
+.fix-download button.close {
+    width: .666666666rem;
+    right: 0;
+}
+ .layout-ball {
+    position: fixed;
+    z-index: 50;
+    bottom: 2.26667rem;
+    right: 0;
+    width: 2.29333rem;
+    height: 2rem;
+    background-image: url(../img/ball.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}

@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="css/index.css"/>
     <link rel="stylesheet" type="text/css" href="lib/swiper-3.4.1.min.css"/>
     <link href="//nos.netease.com/vod163/nep.min.css" rel="stylesheet">
-   
+   <link rel="stylesheet" type="text/css" href="lib/video.css"/>
 </head>
 <body >
 	<header class="header">
@@ -20,6 +20,14 @@
 				<span class="classes">分类</span>
 			</div>
 	</header>
+	<div class="fix-download">
+		<div class="f-bg"></div>
+		<div class="img"></div>
+		<button class="close"></button>
+		<button class="godown"></button>
+		
+	</div>
+	<a class="layout-ball" target="parent" href="https://www.douyu.com/client?platform=0" style="transform-origin: 0px 0px 0px; opacity: 1; transform: scale(1, 1);"></a>
 	<div ng-view class="homecontainer"></div>
 	<script src="lib/angular.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="lib/angular-css.min.js" type="text/javascript" charset="utf-8"></script>
@@ -32,11 +40,29 @@
     <script src="component/roomList/roomList.js" type="text/javascript" charset="utf-8"></script>
     <script src="component/room/room.js" type="text/javascript" charset="utf-8"></script>
     <script src="//nos.netease.com/vod163/nep.min.js"></script>
+    <script src="lib/video.js" type="text/javascript" charset="utf-8"></script>
+    <script src="lib/videojs-live.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript">
     	$(".classes").bind("touchstart",function(e){
 		e.preventDefault();
 		$(".layout-nav").slideToggle();
 	})
+    	$(".fix-download").find($(".close")).bind("touchstart",function(e){
+    		e.preventDefault();
+    		$(".fix-download").hide();
+    	})
+		$(window).scroll(function(){
+		　　var scrollTop = $(this).scrollTop();
+		　　var scrollHeight = $(document).height();
+		　　var windowHeight = $(this).height();
+		　　if(scrollTop + windowHeight == scrollHeight){
+		　　　　$(".fix-download").hide();
+				$(".layout-ball").hide();
+　　}
+		if(scrollTop + windowHeight < scrollHeight){
+			$(".layout-ball").show();
+		}
+});
     </script>
 </body>
 </html>
