@@ -12,9 +12,15 @@ angular.module('roomModule',['ngRoute'])
 		
 	}
 }])
-.controller('roomCtrl',['$scope','$rootScope','roomInfo',function($scope,$rootScope,roomInfo){
+.controller('roomCtrl',['$scope','$rootScope','roomInfo','$sce',function($scope,$rootScope,roomInfo,$sce){
 	roomInfo.get().success(function(res){
+		var v=document.querySelector('video');
 		$scope.roomDetails=res.data;
-		console.log($scope.roomDetails.nickname)
+			$scope.roomDetails.hls_url=$sce.trustAsResourceUrl($scope.roomDetails.hls_url);
+		$scope.startPlay=function(){
+			$('.play-btn').hide();
+			$('#video-poster').hide()
+			v.paused?v.play():v.pause();
+		}
 	})
 }])

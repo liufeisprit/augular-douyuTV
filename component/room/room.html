@@ -1,17 +1,17 @@
 <!--直播-->
 <div class="video-area">
 	<div class="player">
-		<video  id="dy-video-player" class="video-js" type="application/x-mpegURL" webkit-playsinline preload="auto" autoplay="autoplay" src="http://hls3a.douyucdn.cn/live/843697rvDXIHec2k_550/playlist.m3u8?wsSecret=0730d943bba80cd294ceb3e3f06e7242&wsTime=1488620788">
+		<video  id="dy-video-player" class="video-js" type="application/x-mpegURL" webkit-playsinline preload="auto" autoplay="autoplay" ng-src="{{roomDetails.hls_url}}" width="100%" height="100%">
 			<p>您的浏览器不支持video标签</p>
 		</video>
-		<div class="poster">
+		<div class="poster" ng-click="startPlay()">
 			<img src="{{roomDetails.room_src}}" alt="" id="video-poster"/>
-			<div class="play-btn"></div>
+			<div class="play-btn" ></div>
 			<div class="room-info">
-				<span class="name"></span>
-				<span class="class"></span>
+				<span class="name">{{roomDetails.room_name}}</span>
+				<span class="class">{{roomDetails.tag_name}}</span>
 			</div>
-			<div class="room-stop-focus" ng-if="roomDetails.show_status=0">
+			<div class="room-stop-focus" ng-if="roomDetails.show_status==0">
 				<p class="stop-title">主播正在赶来路上~</p>
 				<p class="stop-tip">赶快关注主播不错过下次~</p>
 				<button class="stop-more hd-focus">关注</button>
@@ -31,7 +31,7 @@
 			</p>
 			<p class="online-content" id="online">
 				共
-				<span class="online"></span>
+				<span class="online">{{roomDetails.online}}</span>
 				人正在观看
 			</p>
 		</div>
