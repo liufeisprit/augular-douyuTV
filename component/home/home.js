@@ -35,6 +35,7 @@ angular.module('homeModule',['ngRoute'])
 	}
 }])
 .controller('homeCtrl',['$scope',"catearr","$rootScope","homeDataArr","swiper","$http",function($scope,catearr,$rootScope,homeDataArr,swiper,$http){
+	$("header").show();
 	$(".btns").css("display","flex");
 	var hot=0;
 	catearr.get().success(function(res){
@@ -73,32 +74,17 @@ angular.module('homeModule',['ngRoute'])
 	})
 		}
 	//传值
-	$scope.getroomList=function(name){
-		$rootScope.roomName=name;
-	}
 	$scope.getroomList2=function(name){
 		$rootScope.roomSlideId=name;
 	}
-	$scope.changehotlive=function(cateid,roomid){
-		$rootScope.cateid=cateid;
-		$rootScope.roomid=roomid;
-	}
 	$scope.changelive=function(cateid,roomid){
-		$rootScope.cateid=cateid;
-		$rootScope.roomid=roomid;
+		var obj={
+			"cateid":cateid,
+			"roomid":roomid
+		}
+		localStorage.setItem("live",JSON.stringify(obj))
 	}
-	$scope.changeyz=function(cateid,roomid){
-		$rootScope.cateid=cateid;
-		$rootScope.roomid=roomid;
-	}
-	$scope.changemix=function(cateid,roomid){
-		$rootScope.cateid=cateid;
-		$rootScope.roomid=roomid;
-	}
-	$scope.changeslider=function(cateid,roomid){
-		$rootScope.cateid=cateid;
-		$rootScope.roomid=roomid;
-	}
+
 	//回到顶部
 	$(".gotop span").bind("touchstart",function(){
 	document.body.scrollTop =0;

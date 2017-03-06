@@ -15,7 +15,7 @@
 <div class="swiper-container" id="slider">
 				<div class="swiper-wrapper" id="swiper-wrapper">
 					<div class="swiper-slide" ng-repeat="obj in slideArr" style="width: 375px;" ng-click="getroomList2(obj.id)">
-						<a href="#/room"ng-click="changeslider(obj.room.cate2_id,obj.room.room_id)">
+						<a href="#/room"ng-click="changelive(obj.room.cate2_id,obj.room.room_id)">
 							<img ng-src="{{obj.pic_url}}" alt="" />
 						</a>
 						
@@ -31,7 +31,7 @@
 	<div class="content">
 		
 		<div class="c-room-item" ng-repeat="hotitem in hotListArr">
-			<a href="#/room" ng-click="changehotlive(hotitem.cate2_id,hotitem.room_id)">
+			<a href="#/room" ng-click="changelive(hotitem.cate2_id,hotitem.room_id)">
 			<div class="room-show">
 				<img lazy-src="{{hotitem['room_src']}}"/>
 				<div class="up-shadow"></div>
@@ -71,7 +71,7 @@
 	<div class="content">
 		
 		<div class="home-yz-list-item" ng-repeat="hotitem in yzListArr">
-			<a href="#/room" ng-click="changeyz(hotitem.cate2_id,hotitem.room_id)">
+			<a href="#/room" ng-click="changelive(hotitem.cate2_id,hotitem.room_id)">
 			<div class="show">
 				<img lazy-src="{{hotitem['vertical_src']}}"/>
 				<span class="online"><i class="icon icon-eye"></i>{{hotitem.online}}</span>				
@@ -102,7 +102,7 @@
 	<div class="content">
 		
 		<div class="c-room-item" ng-repeat="hotitem in mix.data">
-			<a href="#/room" ng-click="changemix(hotitem.cate2_id,hotitem.room_id)">
+			<a href="#/room" ng-click="changelive(hotitem.cate2_id,hotitem.room_id)">
 			<div class="room-show">
 				<img lazy-src="{{hotitem['room_src']}}"/>
 				<div class="up-shadow"></div>

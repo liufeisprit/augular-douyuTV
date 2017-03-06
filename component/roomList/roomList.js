@@ -135,8 +135,11 @@ angular.module('roomListModule',['ngRoute','me-lazyload'])
 	
 //	Byval()
 	$scope.Byval=function(cateid,roomid){
-		$rootScope.cateid=cateid;
-		$rootScope.roomid=roomid;
+		var obj={
+			"cateid":cateid,
+			"roomid":roomid
+		}
+		localStorage.setItem("live",JSON.stringify(obj))
 	}
 	
 	$(".btns").hide();
