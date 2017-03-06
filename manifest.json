@@ -1,4 +1,4 @@
-﻿{
+{
     "@platforms": ["android", "iPhone", "iPad"],
     "id": "H5D88A12E",/*应用的标识，创建应用时自动生成，勿手动修改*/
     "name": "douyuTV",/*应用名称，程序桌面图标名称*/
@@ -199,5 +199,54 @@
                 }
             }
         }
-    }
+    },
+	"dependencies": {
+		"pages": {
+			"index.html": {
+				"resources": [
+					"css/index.css",
+					"component/room/room.js",
+					"lib/angular-css.min.js",
+					"lib/angular.min.js",
+					"component/home/home.js",
+					"lib/angular-route.js",
+					"lib/swiper-3.4.1.min.js",
+					"lib/swiper-3.4.1.min.css",
+					"component/roomList/roomList.js",
+					"app.js",
+					"lib/me-lazyload.js",
+					"css/reset.css",
+					"lib/jquery.min.js"
+				],
+				"refer": [],
+				"priority": 0
+			}
+		},
+		"idle": {
+			"resources": [
+				"img/more.png",
+				"component/home/home.css",
+				"img/list-item-def-thumb.gif",
+				"img/live.png",
+				"img/hot.png",
+				"component/room/room.css",
+				"lib/angular-ui-router.js",
+				"img/change.png",
+				"img/yz.png",
+				"img/upshdow.png",
+				"img/icon-v2.png",
+				"img/icon.png",
+				"img/roomonline.png",
+				"img/btns.png",
+				"component/room/room.html",
+				"component/home/home.html",
+				"component/roomList/roomList.html",
+				"lib/angular-animate.js",
+				"img/classIcon.png",
+				"img/roomnickname.png",
+				"component/roomList/roomList.css",
+				"component/home/index.css"
+			]
+		}
+	}
 }
