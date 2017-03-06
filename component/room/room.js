@@ -7,12 +7,14 @@ angular.module('roomModule',['ngRoute'])
 	});
 }])
 .service("roomInfo",["$http",'$rootScope',function($http,$rootScope){
+	$rootScope.roomid=JSON.parse(localStorage.getItem('live')).roomid;
 	this.get=function(){
 		return $http.get("https://m.douyu.com/html5/live?roomId="+$rootScope.roomid);
 		
 	}
 }])
 .service("cateInfo",["$http",'$rootScope',function($http,$rootScope){
+	$rootScope.cateid=JSON.parse(localStorage.getItem('live')).cateid;
 	this.get=function(){
 		return $http.get("http://api.douyutv.com/api/v1/live/"+$rootScope.cateid);
 	}
@@ -29,7 +31,7 @@ angular.module('roomModule',['ngRoute'])
 			$scope.roomDetails.hls_url=$sce.trustAsResourceUrl($scope.roomDetails.hls_url);
 		$scope.startPlay=function(){
 			$('.play-btn').hide();
-			$('#video-poster').hide()
+			$('#video-poster').hide();
 			v.paused?v.play():v.pause();
 		}
 	});
@@ -51,9 +53,11 @@ angular.module('roomModule',['ngRoute'])
 	})
 	
 	$scope.changehotlive=function(cateid,roomid){
-		$rootScope.cateid=cateid;
-		$rootScope.roomid=roomid;
-		console.log($rootScope.cateid);
-		console.log($rootScope.roomid);
+		var obj={
+			"cateid":cateid,
+			"roomid":roomid
+		}
+		localStorage.setItem("live",JSON.stringify(obj));
+		location.reload(true);
 	}
 }])

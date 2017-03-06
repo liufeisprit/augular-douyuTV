@@ -79,8 +79,8 @@ angular.module('homeModule',['ngRoute'])
 	}
 	$scope.changelive=function(cateid,roomid){
 		var obj={
-			"cateid":cateid,
-			"roomid":roomid
+			cateid:cateid,
+			roomid:roomid
 		}
 		localStorage.setItem("live",JSON.stringify(obj))
 	}
