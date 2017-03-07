@@ -22,7 +22,7 @@ angular.module('containerModule',['ngRoute','me-lazyload'])
 			$('.hot-content').hide();
 			var value=$(".search-app .layout-header input").val();
 			$http.get("https://m.douyu.com/search/getData?sk="+value+"&type=1&sort=1&limit=20&offset=0").success(function(res){
-				console.log(res);
+//				console.log(res);
 				$scope.anchorArr=res.anchor;
 				
 				$scope.liveArr=res.live;
