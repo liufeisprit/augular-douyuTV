@@ -1,0 +1,86 @@
+<div class="js-app-container">
+	<div class="search-app">
+		<div class="layout-header">
+			<input type="text" name="" id="" value="" />
+			<button ng-click="search()">搜索</button>
+		</div>
+		<!--最近热搜-->
+		<div class="layout-content">
+			<h3 class="hot-title">最近热搜</h3>
+			<div class="hot-content">
+				<ul class="left-block">
+					<li ng-repeat="(i,getTodayTopAll) in getTodayTop" ng-if="i<5" ng-click="getname(getTodayTopAll)">
+						<font class="icon-v2-num{{i+1}}"></font>
+						<span>{{getTodayTopAll}}</span>
+					</li>
+				</ul>
+				<ul class="right-block">
+					<li ng-repeat="(i,getTodayTopAll) in getTodayTop" ng-if="i>=5" ng-click="getname(getTodayTopAll)">
+						<font class="icon-v2-num{{i+1}}"></font>
+						<span>{{getTodayTopAll}}</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<!--搜索内容页面-->
+		<div class="layout-innner">
+				<ul class="layout-control">
+					<li class="item cur" ng-click="changeitem(0)">全部</li>
+					<li class="item" ng-click="changeitem(1)">直播</li>
+					<li class="item" ng-click="changeitem(2)">主播</li>
+					<li class="item sort" ng-click="changeitem(3)">{{sorttype}}
+					</li>
+					<div class="sort-content" ng-class="{true:active,false:inactive}">
+						<span data-type='1' ng-click="changesort('','相关度')">相关度</span>
+						<span data-type='2' ng-click="changesort('follow','人气值')">人气值</span>
+						<span data-type='3' ng-click="changesort('follow','关注量')">关注量</span>
+					</div>
+				</ul>
+				<div class="layout-content">
+				<!--top-->
+					<div class="content-block anchors">
+						<h2 class="title">
+							<span></span>
+							主播
+							<div class="more">更多</div>
+						</h2>
+						<ul class="content">
+							<a href="" ng-repeat="anchor in anchorArr | orderBy : orderByauther">
+								<li class="anchor-item">
+									<img ng-src="{{anchor.avatar}}" alt="" />
+									<div class="down-line">
+										<p class="nickname">{{anchor.nrNickname}}</p>
+										<p class="follow">{{anchor.follow}}人关注</p>
+									</div>
+								</li>
+							</a>
+						</ul>
+					</div>
+					
+					<!--bottom-->
+					<div class="content-inner">
+						<h2 class="title">
+							<span></span>
+							直播
+							<div class="more">更多</div>
+						</h2>
+						<ul class="content">
+							<div class="c-room-item" ng-repeat="live in liveArr | orderBy:orderBylive">
+								<a href="#/room" ng-click="change(live.tagId,live.room_id)">
+									<li class="room-show islive">
+										<img src="{{live.roomSrc}}" alt="" />
+										<p class="up-shadow" ng-if="live.isLive==1"></p>
+										<div class="room-online">{{live.popularity}}</div>
+										<div class="bottom-shadow"></div>
+										<div class="room-nickname">{{live.nickname}}</div>
+									</li>
+										<div class="room-des">{{live.noRed}}</div>
+								</a>
+							</div>
+						</ul>
+					</div>
+				</div>
+		</div>
+	</div>
+</div>

@@ -86,10 +86,9 @@ angular.module('homeModule',['ngRoute'])
 	}
 
 	//回到顶部
-	$(".gotop span").bind("touchstart",function(){
-	document.body.scrollTop =0;
-	event.preventDefault();
-})
-	
+	$scope.gotop=function(){
+		document.body.scrollTop =0;
+		event.preventDefault();
+	}
 }])
 
